@@ -38,9 +38,30 @@ class User {
     public AgeInYears(){
         return `The user is ${this.age} years old`;
     }
+
+    payInvoice(){
+        console.log(`${this.name} paid invoice`)
+    }
 }
 
 var john = new User('John', 'john@gmail.com', 29);
-console.log(john.AgeInYears())
+//console.log(john.AgeInYears())
 document.write(john.name);
-console.log(john.register());
+//console.log(john.register());
+
+///inheritance
+class Member extends User{
+    id: number;
+
+    constructor(id, name, email, age){
+        super(name, email, age) //llamada al constructor de la clase padre
+        this.id=id
+    }
+
+    payInvoice() {
+        super.payInvoice();
+    }
+}
+
+var gordon = new Member(1, 'Gordon', 'gordon@gmail.com', 24);
+gordon.payInvoice();
