@@ -6,7 +6,8 @@
   -  ```ts-node```: Facilita la ejecución directa de código TypeScript en entornos de desarrollo.
   -  ```typescript```: Compila el código TypeScript en JavaScript para su distribución y ejecución en entornos reales.
 - Y en la seccion de scripts del *package.json* se deben agregar los nombres de los archivos que se desea ejecutar, ejemplo:
-```  "scripts": {
+```
+"scripts": {
     "calculator": "ts-node calculator.ts",
     "run:multiplier": "ts-node multiplier.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
